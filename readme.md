@@ -2,26 +2,23 @@
 
 ![m3501_stm32f072](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+This is a drop in replacement PCB for the Apple M3501 (Apple Extended Keyboard 2, AEK2). Utilizing a custom MCU this PCB replaces the stock PCB and provides the following benefits:
+    1. Native USB support. No need for a converter.
+    2. NKRO (No Key Roll Over)
+
+This PCB maintains the following features:
+    1. Locking caps lock switch support
+    2. LED status indicators
+    3. Left and right USB connectors (NOT to be used at the same time!)
 
 * Keyboard Maintainer: [Tomahawk Labs](https://github.com/tomahawklabskb)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
-
-Make example for this keyboard (after setting up your build environment):
-
-    make m3501_stm32f072:default
-
-Flashing example for this keyboard:
-
-    make m3501_stm32f072:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+* Hardware Supported: MCU: https://github.com/nearestexit/kb_f072
+* Hardware Availability: Used market
 
 ## Bootloader
 
-Enter the bootloader in 3 ways:
+Enter the bootloader: short the BOOTSEL pin to 3.3v and press the reset button mounted on the MCU, then unshort BOOTSEL. Tweezers work great for this.
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+Known issues: 
+    1. Onboard BOOTSEL switch is not wired correctly
+    2. USB Breakout has D+ and D- flipped on both sides
