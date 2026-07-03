@@ -1,4 +1,4 @@
-I am TomahawkLabs and I have designed a drop in replacement PCB for the Apple M3501 using a custom [STM32 chip by nearestexit](https://github.com/nearestexit/kb_f072). The goal for this project was to create a drop in solution that keeps all the asthetics and core functionality of the M3501, but with native USB support. All LEDs function as they should and the custom cable works in both the left and right ADB ports. This project uses QMK to flash the keyboard.
+This is a drop in replacement PCB for the Apple M3501 using a custom [STM32 chip by nearestexit](https://github.com/nearestexit/kb_f072). The goal for this project was to create a drop in solution that keeps all the asthetics and core functionality of the M3501, but with native USB support. All LEDs function as they should and the custom cable works in both the left and right ADB ports. This project uses QMK to flash the keyboard.
 -----------------------------------------------------
 Equipment Required:
 
